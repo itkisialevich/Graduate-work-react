@@ -1,0 +1,1 @@
+export { HeadFooter } from "./HeadFooter";

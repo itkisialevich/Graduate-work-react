@@ -1,0 +1,143 @@
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+  width: 1200px;
+}
+
+.productOverview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 300px;
+  height: 350px;
+  margin-left: 200px;
+}
+
+.productImg {
+  width: 350px;
+  height: 350px;
+}
+
+.productMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.productTitle,
+.productDiscription {
+  margin: 0px;
+}
+
+.productTitle {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  width: 223px;
+  text-align: left;
+}
+
+.productDiscription {
+  margin-bottom: 10px;
+  width: 223px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+}
+
+.checkbox {
+  appearance: none;
+  margin: 0px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  background-image: url("../images/icon/favorite.svg");
+  background-size: contain;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  position: relative;
+}
+
+.checkbox:hover {
+  border: none;
+  background-size: contain;
+  background-image: url("../images/icon/favoriteWhite.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.checkbox:checked {
+  border: none;
+  background-size: contain;
+  background-image: url("../images/icon/favoriteWhite.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.productLine {
+  width: 300px;
+  height: 3px;
+  background-color: #ffffff;
+}
+
+.productFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 10px 15px 10px 15px;
+  width: 300px;
+  height: 56px;
+  background-color: #000000;
+}
+
+.productPrice {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.productButton {
+  appearance: none;
+  margin: 0px;
+  padding: 0px;
+  width: 80px;
+  height: 25px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}

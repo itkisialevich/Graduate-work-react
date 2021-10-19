@@ -1,0 +1,170 @@
+.head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  height: 220px;
+  background-color: #ffffff;
+  background-image: url("../images/logo/swarovski-logo.svg");
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.headerContainerLeft,
+.headerContainerRight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home,
+.seachButton,
+.user,
+.wishlist,
+.basket {
+  width: 20px;
+  height: 20px;
+  margin-left: 7px;
+  margin-right: 3px;
+  background-size: contain;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.home {
+  margin-right: 15px;
+  background-image: url("../images/icon/home.svg");
+}
+
+.home:hover {
+  background-image: url("../images/icon/homeHover.svg");
+}
+
+.homeLink {
+  display: block;
+  height: 100%;
+}
+
+.seach {
+  display: flex;
+  align-items: flex-end;
+}
+
+.seachInput {
+  width: 200px;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Prompt", sans-serif;
+  color: #000000;
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #000000;
+}
+
+.seachInput::placeholder {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0.33;
+}
+
+.seachButton {
+  align-self: center;
+  background-color: #ffffff;
+  border: none;
+  background-image: url("../images/icon/seach.svg");
+}
+
+.seachButton:hover {
+  background-image: url("../images/icon/seachHover.png");
+}
+
+.user {
+  background-image: url("../images/icon/user.svg");
+}
+.user:hover {
+  background-image: url("../images/icon/userHover.png");
+}
+
+.wishlist {
+  background-image: url("../images/icon/favorite.svg");
+}
+.wishlist:hover {
+  background-image: url("../images/icon/favoriteHover.png");
+}
+
+.basket {
+  background-image: url("../images/icon/basket.svg");
+}
+.basket:hover {
+  background-image: url("../images/icon/basketHover.png");
+}
+
+.linkHeader {
+  text-decoration: none;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.linkHeader:hover {
+  color: #e5ddd0;
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 140px;
+  padding: 0px;
+  width: 700px;
+}
+
+.link {
+  margin-left: 10px;
+  margin-right: 10px;
+  list-style-type: none;
+}
+
+.linkCategories {
+  position: relative;
+  display: inline-block;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.linkCategories::before {
+  content: "";
+  bottom: calc(-7px);
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  transition: 0.2s;
+  transform: scaleX(0);
+}
+.linkCategories:hover:before {
+  transform: scaleX(1);
+}

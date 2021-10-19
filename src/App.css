@@ -1,0 +1,11 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  min-height: 800px;
+  text-align: center;
+  background: #e5ddd0;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+}

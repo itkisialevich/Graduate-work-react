@@ -1,0 +1,198 @@
+.wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url("../images/logo/basketBackground2.svg");
+  background-size: cover;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  width: 1200px;
+}
+
+.basketCard {
+  /*background-color: #ffffff;*/
+}
+
+.basketTitle {
+  margin: 0px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #000000;
+}
+
+.basketOverview {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1200px;
+  height: 200px;
+}
+
+.basketMain {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.basketImg {
+  width: 200px;
+  height: 200px;
+  margin-right: 50px;
+}
+
+.productMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  height: 200px;
+}
+
+.productHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.productTitle,
+.productCategory {
+  margin: 0px;
+}
+
+.productTitle {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  width: 223px;
+  text-align: left;
+}
+
+.productCategory {
+  margin-bottom: 10px;
+  width: 223px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+}
+
+.basket {
+  appearance: none;
+  margin: 0px;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  background-image: url("../images/icon/delete.svg");
+  background-size: contain;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  opacity: 0.5;
+  position: relative;
+}
+
+.productFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-top: 20px;
+  padding: 10px 15px 10px 15px;
+  width: 300px;
+  height: 56px;
+  background-color: #000000;
+}
+
+.productPrice {
+  margin: 0px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #000000;
+  text-align: left;
+}
+
+.basketLine {
+  margin: 15px auto;
+  width: 1200px;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+.lineBlack {
+  margin: 5px 0px 15px 0px;
+  width: 1200px;
+  height: 3px;
+  background-color: #000000;
+}
+
+.basketCheck {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-end;
+  width: 300px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.totalTitle {
+  margin: 0px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #000000;
+}
+
+.totalPrice {
+  margin: 0px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #000000;
+}
+
+.basketButton {
+  appearance: none;
+  margin: 0px;
+  padding: 0px;
+  width: 300px;
+  height: 56px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}

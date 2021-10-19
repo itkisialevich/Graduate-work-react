@@ -1,0 +1,166 @@
+.head {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 15px 5px 10px 5px;
+  width: 100%;
+  height: 95px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.headerContainerLeft,
+.headerContainerRight {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.seachButton,
+.user,
+.wishlist,
+.basket {
+  width: 20px;
+  height: 20px;
+  margin-left: 7px;
+  margin-right: 7px;
+  background-size: contain;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.logo {
+  width: 200px;
+  height: 50px;
+  margin-right: 15px;
+  background-image: url("../images/logo/logo.svg");
+  background-size: contain;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.logo:hover {
+  background-image: url("../images/logo/logoHover.svg");
+  background-size: contain;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+
+.logoLink,
+.linkHeader {
+  display: block;
+  height: 100%;
+}
+
+.seach {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+}
+
+.seachInput {
+  width: 200px;
+  text-align: left;
+  font-size: 18px;
+  font-family: "Prompt", sans-serif;
+  color: #000000;
+  outline: none;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #000000;
+}
+
+.seachInput::placeholder {
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 2px;
+  opacity: 0.5;
+}
+
+.seachButton {
+  align-self: center;
+  background-color: #ffffff;
+  border: none;
+  background-image: url("../images/icon/seach.svg");
+}
+
+.seachButton:hover {
+  background-image: url("../images/icon/seachHover.png");
+}
+
+.user {
+  background-image: url("../images/icon/user.svg");
+}
+.user:hover {
+  background-image: url("../images/icon/userHover.png");
+}
+
+.wishlist {
+  background-image: url("../images/icon/favorite.svg");
+}
+.wishlist:hover {
+  background-image: url("../images/icon/favoriteHover.png");
+}
+
+.basket {
+  background-image: url("../images/icon/basket.svg");
+}
+.basket:hover {
+  background-image: url("../images/icon/basketHover.png");
+}
+
+.categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0px;
+  width: 700px;
+}
+
+.link {
+  margin-left: 10px;
+  margin-right: 10px;
+  list-style-type: none;
+}
+
+.linkCategories {
+  position: relative;
+  display: inline-block;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.linkCategories::before {
+  content: "";
+  bottom: calc(-7px);
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #000000;
+  transition: 0.2s;
+  transform: scaleX(0);
+}
+.linkCategories:hover:before {
+  transform: scaleX(1);
+}
