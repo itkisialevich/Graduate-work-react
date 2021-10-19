@@ -16,7 +16,8 @@ export function HomePage() {
           return (
             <Card
               key={item.id}
-              src={item.img}
+              id={item.id}
+              img={item.img}
               title={item.title}
               description={item.description}
               price={item.price}

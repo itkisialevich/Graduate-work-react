@@ -17,11 +17,29 @@ export function Card({
 }) {
   return (
     <div className={styles.cardBox}>
-      {/*<div className={styles.miniCard}>
+      {/*<div className={styles.miniCard}
+        id={id}
+        currency={currency}
+        status={status}
+        category={category}
+        type={type}
+        isFavourite={isFavourite}
+        color={color}
+        material={material}>
         <input className={styles.checkbox} type="radio" />
         <img className={styles.miniCardImage} src={img} alt="" />
       </div>*/}
-      <div className={styles.card}>
+      <div
+        className={styles.card}
+        id={id}
+        currency={currency}
+        status={status}
+        category={category}
+        type={type}
+        isFavourite={isFavourite}
+        color={color}
+        material={material}
+      >
         <input className={styles.checkbox} type="radio" />
         <img
           className={styles.cardImage}
