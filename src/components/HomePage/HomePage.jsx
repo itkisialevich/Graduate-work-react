@@ -14,14 +14,15 @@ export function HomePage() {
       <div className={styles.main}>
         {product.map((item) => {
           return (
-            <div key={item.id} className={styles.product}>
-              <input className={styles.checkbox} type="radio" />
-              <img className={styles.productImage} src={item.img} alt="" />
-            </div>
+            <Card
+              key={item.id}
+              src={item.img}
+              title={item.title}
+              description={item.description}
+              price={item.price}
+            />
           );
         })}
-
-        <Card />
       </div>
       <Footer />
     </div>

@@ -11,7 +11,7 @@
     "type": "ring",
     "isFavourite": "isFavourite",
     "color": "white",
-    " material": "silver tone"
+    "material": "silver tone"
   },
   {
     "id": 1,
@@ -25,7 +25,7 @@
     "type": "ring",
     "isFavourite": "isFavourite",
     "color": "white",
-    " material": "silver tone"
+    "material": "silver tone"
   },
   {
     "id": 2,
@@ -275,7 +275,7 @@
   {
     "id": 20,
     "img": "/images/product/necklaces/swarovski-infinity-y-necklace.png",
-    "title": "Swarovski Infinity Y necklace",
+    "title": "Infinity Y necklace",
     "description": "Infinity, White, Rose gold-tone plated",
     "price": 220,
     "currency": "USD",
@@ -456,7 +456,7 @@
   {
     "id": 33,
     "img": "/images/product/accessories/crystalline-pen.jpg",
-    "title": "Crystalline Nova ballpoint pen",
+    "title": "Crystalline ballpoint pen",
     "description": "Set (2), White, Mixed metal finish",
     "price": 80,
     "currency": "USD",
