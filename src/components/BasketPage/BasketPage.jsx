@@ -2,7 +2,6 @@ import React from "react";
 import { HeaderMenu } from "../HeaderMenu";
 import { Footer } from "../Footer";
 import styles from "./BasketPage.module.css";
-import twistRing from "../images/product/twistRing.jpg";
 
 export function BasketPage() {
   return (
@@ -14,7 +13,11 @@ export function BasketPage() {
         <div className={styles.basketCard}>
           <div className={styles.basketOverview}>
             <div className={styles.basketMain}>
-              <img className={styles.basketImg} src={twistRing} alt="" />
+              <img
+                className={styles.basketImg}
+                src="/images/product/rings/twistRing.jpg"
+                alt=""
+              />
               <div className={styles.productMain}>
                 <div className={styles.productHeader}>
                   <h3 className={styles.productTitle}>Twist ring</h3>
