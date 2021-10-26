@@ -2,11 +2,15 @@ import React from "react";
 import { useState } from "react";
 import styles from "./HeaderMenu.module.css";
 
-export function HeaderMenu() {
+export function HeaderMenu({ onClick }) {
   const [text, setText] = useState("");
 
   const onChangeInput = (event) => {
     setText(event.target.value);
+  };
+
+  const getText = () => {
+    onClick(text);
   };
 
   return (
@@ -19,15 +23,15 @@ export function HeaderMenu() {
         </div>
 
         <div className={styles.headerContainerRight}>
-          <div className={styles.seach}>
+          <div className={styles.search}>
             <input
-              className={styles.seachInput}
+              className={styles.searchInput}
               type="text"
               value={text}
-              placeholder="seach..."
+              placeholder="search..."
               onChange={onChangeInput}
             ></input>
-            <button className={styles.seachButton}></button>
+            <button className={styles.searchButton} onClick={getText}></button>
           </div>
 
           <div className={styles.user}>

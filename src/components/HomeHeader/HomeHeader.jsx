@@ -2,11 +2,16 @@ import React from "react";
 import { useState } from "react";
 import styles from "./HomeHeader.module.css";
 
-export function HomeHeader() {
+export function HomeHeader({ onClick }) {
   const [text, setText] = useState("");
 
   const onChangeInput = (event) => {
     setText(event.target.value);
+  };
+
+  const getText = () => {
+    onClick(text);
+    setText("");
   };
 
   return (
@@ -16,15 +21,15 @@ export function HomeHeader() {
           <div className={styles.home}>
             <a className={styles.homeLink} href="https://google.com"></a>
           </div>
-          <div className={styles.seach}>
+          <div className={styles.search}>
             <input
-              className={styles.seachInput}
+              className={styles.searchInput}
               type="text"
               value={text}
-              placeholder="seach..."
+              placeholder="search..."
               onChange={onChangeInput}
             ></input>
-            <button className={styles.seachButton}></button>
+            <button className={styles.searchButton} onClick={getText}></button>
           </div>
         </div>
 

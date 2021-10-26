@@ -30,7 +30,7 @@
   align-items: center;
 }
 
-.seachButton,
+.searchButton,
 .user,
 .wishlist,
 .basket {
@@ -66,13 +66,13 @@
   height: 100%;
 }
 
-.seach {
+.search {
   display: flex;
   align-items: flex-end;
   margin-right: 20px;
 }
 
-.seachInput {
+.searchInput {
   width: 200px;
   text-align: left;
   font-size: 18px;
@@ -84,7 +84,7 @@
   border-bottom: 1px solid #000000;
 }
 
-.seachInput::placeholder {
+.searchInput::placeholder {
   font-family: "Prompt", sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -92,14 +92,14 @@
   opacity: 0.5;
 }
 
-.seachButton {
+.searchButton {
   align-self: center;
   background-color: #ffffff;
   border: none;
   background-image: url("../images/icon/seach.svg");
 }
 
-.seachButton:hover {
+.searchButton:hover {
   background-image: url("../images/icon/seachHover.png");
 }
 

@@ -1,0 +1,99 @@
+.wrap {
+  width: 1200px;
+}
+
+.modalFilter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  box-sizing: border-box;
+  padding: 23px 40px;
+  width: 581px;
+  background-color: #ffffff;
+}
+
+.modalHeader {
+  margin: 0px 0px 20px 0px;
+  width: 501px;
+  height: 30px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000000;
+}
+
+.modalTitle {
+  margin: 0px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-align: left;
+}
+
+.filterByColor,
+.filterByMaterial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 501px;
+  margin-bottom: 20px;
+}
+
+.buttonFilter {
+  appearance: none;
+  margin-bottom: 5px;
+  padding: 0px;
+  width: 501px;
+  height: 25px;
+  background-color: white;
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-align: left;
+  border: none;
+}
+
+.formFilter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 501px;
+  text-align: center;
+}
+
+.labelFilter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+}
+
+.inputFilter {
+  margin: 0px 3px 0px 0px;
+}
+
+.resetFilter {
+  appearance: none;
+  margin: 7px auto;
+  padding: 0px;
+  width: 250px;
+  height: 48px;
+  background-color: white;
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid #000000;
+}
+
+.resetFilter:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
