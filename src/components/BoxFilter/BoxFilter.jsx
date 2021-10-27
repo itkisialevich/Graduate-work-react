@@ -1,25 +1,32 @@
 import React from "react";
 import styles from "./BoxFilter.module.css";
 
-export function BoxFilter({ sortLowToHigh, sortReset, sortHighToLow }) {
+export function BoxFilter({
+  showFilters,
+  sortLowToHigh,
+  sortReset,
+  sortHighToLow,
+}) {
   return (
     <div className={styles.boxFilter}>
       <div className={styles.generalFilter}>
-        <button className={styles.generalButton}>Filter by</button>
+        <button className={styles.generalButton} onClick={() => showFilters()}>
+          Filter by
+        </button>
       </div>
       <div className={styles.filterByPrice}>
         <p className={styles.filterTitle}>Sort by price:</p>
         <button
           onClick={() => sortLowToHigh()}
-          className={(styles.filterButton, styles.priceUp)}
+          className={`${styles.filterButton} ${styles.priceUp}`}
         ></button>
         <button
           onClick={() => sortReset()}
-          className={(styles.filterButton, styles.priceReset)}
+          className={`${styles.filterButton} ${styles.priceReset}`}
         ></button>
         <button
           onClick={() => sortHighToLow()}
-          className={(styles.filterButton, styles.priceDown)}
+          className={`${styles.filterButton} ${styles.priceDown}`}
         ></button>
       </div>
       {/*<div className={styles.priceFilter}>

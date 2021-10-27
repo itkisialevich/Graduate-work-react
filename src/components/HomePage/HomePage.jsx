@@ -16,7 +16,7 @@ export class HomePage extends React.Component {
     };
   }
 
-  onClickAdd = (text) => {
+  onClickSearch = (text) => {
     const filteredProducts = productJSON.filter((item) =>
       item.type.includes(text)
     );
@@ -49,8 +49,9 @@ export class HomePage extends React.Component {
   render() {
     return (
       <div className={styles.wrap}>
-        <HomeHeader onClick={this.onClickAdd} />
+        <HomeHeader onClick={this.onClickSearch} />
         <BoxFilter
+          showFilters={this.showFilters}
           sortLowToHigh={this.sortLowToHigh}
           sortHighToLow={this.sortHighToLow}
           sortReset={this.sortReset}

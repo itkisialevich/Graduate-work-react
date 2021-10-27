@@ -61,7 +61,7 @@
   text-align: center;
 }
 
-.priceUp {
+.filterButton {
   appearance: none;
   /*margin: 10px 10px 0px 0px;*/
   width: 60px;
@@ -70,43 +70,29 @@
   border: none;
   box-sizing: border-box;
   background-color: transparent;
-  background-image: url("../images/icon/priceUP.svg");
   background-size: contain;
   background-repeat: no-repeat, repeat;
   background-position: center;
   position: relative;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+
+.filterButton:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.priceUp {
+  background-image: url("../images/icon/priceUP.svg");
 }
 
 .priceReset {
-  appearance: none;
-  /*margin: 10px 10px 0px 0px;*/
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  border: none;
-  box-sizing: border-box;
-  background-color: transparent;
   background-image: url("../images/icon/priceReset2.svg");
-  background-size: contain;
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  position: relative;
 }
 
 .priceDown {
-  appearance: none;
-  /*margin: 10px 10px 0px 0px;*/
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  border: none;
-  box-sizing: border-box;
-  background-color: transparent;
   background-image: url("../images/icon/priceDown.svg");
-  background-size: contain;
-  background-repeat: no-repeat, repeat;
-  background-position: center;
-  position: relative;
 }
 
 select {

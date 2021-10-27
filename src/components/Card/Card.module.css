@@ -93,10 +93,14 @@
   box-sizing: border-box;
   margin-top: 20px;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 30px;
   width: 223px;
   height: 56px;
   background-color: #000000;
+  background-image: url("../images/icon/dollar-symbol1.svg");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: left 5px top 13px;
 }
 
 .cardPrice {

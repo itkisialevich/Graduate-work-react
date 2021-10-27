@@ -45,12 +45,7 @@ export function Card({
         material={material}
       >
         <input className={styles.checkbox} type="radio" checked={checked} />
-        <img
-          className={styles.cardImage}
-          //src="/images/product/rings/twistRing.jpg"
-          src={img}
-          alt=""
-        />
+        <img className={styles.cardImage} src={img} alt="" />
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardDiscription}>{description}</p>
         <div className={styles.cardFooter}>

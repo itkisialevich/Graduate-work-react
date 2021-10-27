@@ -11,6 +11,7 @@ export function HeaderMenu({ onClick }) {
 
   const getText = () => {
     onClick(text);
+    setText("");
   };
 
   return (
