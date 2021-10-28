@@ -1,18 +1,18 @@
 import React from "react";
-import styles from "./HomePage.module.css";
-import { HomeHeader } from "../HomeHeader";
+import styles from "./NewProductPage.module.css";
+import { HeaderMenu } from "../HeaderMenu";
 import { BoxFilter } from "../BoxFilter";
 import { ModalFilter } from "../ModalFilter";
 import { Card } from "../Card";
 import { Footer } from "../Footer";
 import productJSON from "../product.json";
 
-export class HomePage extends React.Component {
+export class NewProductPage extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      allproducts: productJSON,
+      allproducts: productJSON.filter((item) => item.status === "new"),
     };
   }
 
@@ -54,7 +54,7 @@ export class HomePage extends React.Component {
   render() {
     return (
       <div className={styles.wrap}>
-        <HomeHeader onClick={this.onClickSearch} />
+        <HeaderMenu onClick={this.onClickSearch} />
         <BoxFilter
           showFilters={this.showFilters}
           sortLowToHigh={this.sortLowToHigh}

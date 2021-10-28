@@ -1,0 +1,1 @@
+export { DecorationsPage } from "./DecorationsPage";

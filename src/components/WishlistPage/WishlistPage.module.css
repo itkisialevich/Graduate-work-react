@@ -1,38 +1,76 @@
-.card {
+.wrap {
+  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
-  justify-content: space-between;
+  width: 100%;
   box-sizing: border-box;
-  margin-bottom: 10px;
-  margin-right: 27px;
-  width: 273px;
-  height: 417px;
-  background-color: #ffffff;
-  border: 1px solid #000000;
 }
 
-.miniCard {
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+  width: 1200px;
+}
+
+.productOverview {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 10px;
-  width: 273px;
-  height: 273px;
-  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 300px;
+  height: 350px;
+  margin-left: 200px;
 }
 
-.miniCardImage {
+.productImg {
+  width: 350px;
+  height: 350px;
+}
+
+.productMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+.productTitle,
+.productDiscription {
+  margin: 0px;
+}
+
+.productTitle {
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  width: 223px;
+  text-align: left;
+}
+
+.productDiscription {
   margin-bottom: 10px;
   width: 223px;
-  height: 223px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
 }
 
 .checkbox {
-  align-self: flex-end;
   appearance: none;
-  margin: 10px 10px 0px 0px;
+  margin: 0px;
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -48,7 +86,7 @@
 .checkbox:hover {
   border: none;
   background-size: contain;
-  background-image: url("../images/icon/favoriteHover.png");
+  background-image: url("../images/icon/favoriteWhite.svg");
   background-repeat: no-repeat, repeat;
   background-position: center;
 }
@@ -56,55 +94,30 @@
 .checkbox:checked {
   border: none;
   background-size: contain;
-  background-image: url("../images/icon/favoriteHover.png");
+  background-image: url("../images/icon/favoriteWhite.svg");
   background-repeat: no-repeat, repeat;
   background-position: center;
 }
 
-.cardImage {
-  width: 223px;
-  height: 223px;
+.productLine {
+  width: 300px;
+  height: 3px;
+  background-color: #ffffff;
 }
 
-.cardTitle,
-.cardDiscription {
-  margin: 0px;
-}
-
-.cardTitle {
-  font-family: "Prompt", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  width: 223px;
-  text-align: left;
-}
-
-.cardDiscription {
-  font-family: "Prompt", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  width: 223px;
-  text-align: left;
-}
-
-.cardFooter {
+.productFooter {
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   margin-top: 20px;
-  margin-bottom: 10px;
-  padding: 10px 10px 10px 30px;
-  width: 223px;
+  padding: 10px 15px 10px 15px;
+  width: 300px;
   height: 56px;
   background-color: #000000;
-  background-image: url("../images/icon/dollar-symbol1.svg");
-  background-repeat: no-repeat;
-  background-size: 30px 30px;
-  background-position: left 5px top 13px;
 }
 
-.cardPrice {
+.productPrice {
   font-family: "Prompt", sans-serif;
   font-weight: 600;
   font-size: 18px;
@@ -113,7 +126,7 @@
   text-align: left;
 }
 
-.cardButton {
+.productButton {
   appearance: none;
   margin: 0px;
   padding: 0px;

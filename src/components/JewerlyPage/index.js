@@ -1,0 +1,1 @@
+export { JewerlyPage } from "./JewerlyPage";
