@@ -13,7 +13,9 @@ export class HomePage extends React.Component {
 
     this.state = {
       allproducts: productJSON,
+      show: false,
     };
+    this.showFilters = this.showFilters.bind(this);
   }
 
   onClickSearch = (text) => {
@@ -27,6 +29,10 @@ export class HomePage extends React.Component {
     );
     this.setState({ allproducts: filteredProducts });
   };
+
+  showFilters() {
+    this.setState({ show: !this.state.show });
+  }
 
   sortReset = () => {
     const filteredProducts = this.state.allproducts.sort(
@@ -61,7 +67,7 @@ export class HomePage extends React.Component {
           sortHighToLow={this.sortHighToLow}
           sortReset={this.sortReset}
         />
-        <ModalFilter />
+        {this.state.show ? <ModalFilter /> : null}
         <div className={styles.main}>
           {this.state.allproducts.map((item) => {
             return (

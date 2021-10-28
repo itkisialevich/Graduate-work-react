@@ -51,22 +51,24 @@ export function HomeHeader({ onClick }) {
           </NavLink>
         </div>
       </div>
-      <div className={styles.categories}>
-        <NavLink to="/new" className={styles.linkCategories}>
-          New
-        </NavLink>
-        <NavLink to="/jewerly" className={styles.linkCategories}>
-          Jewerly
-        </NavLink>
-        <NavLink to="/watches" className={styles.linkCategories}>
-          Watches
-        </NavLink>
-        <NavLink to="/decorations" className={styles.linkCategories}>
-          Decorations
-        </NavLink>
-        <NavLink to="/accessories" className={styles.linkCategories}>
-          Accessories
-        </NavLink>
+      <div className={styles.headerMenu}>
+        <div className={styles.categories}>
+          <NavLink to="/new" className={styles.linkCategories}>
+            New
+          </NavLink>
+          <NavLink to="/jewerly" className={styles.linkCategories}>
+            Jewerly
+          </NavLink>
+          <NavLink to="/watches" className={styles.linkCategories}>
+            Watches
+          </NavLink>
+          <NavLink to="/decorations" className={styles.linkCategories}>
+            Decorations
+          </NavLink>
+          <NavLink to="/accessories" className={styles.linkCategories}>
+            Accessories
+          </NavLink>
+        </div>
       </div>
     </div>
   );

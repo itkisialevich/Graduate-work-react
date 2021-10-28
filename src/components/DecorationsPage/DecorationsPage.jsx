@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./DecorationsPage.module.css";
 import { HeaderMenu } from "../HeaderMenu";
-import { BoxFilter } from "../BoxFilter";
-import { ModalFilter } from "../ModalFilter";
+import { FilterByPrice } from "../FilterByPrice";
 import { Card } from "../Card";
 import { Footer } from "../Footer";
 import productJSON from "../product.json";
@@ -57,13 +56,11 @@ export class DecorationsPage extends React.Component {
     return (
       <div className={styles.wrap}>
         <HeaderMenu onClick={this.onClickSearch} />
-        <BoxFilter
-          showFilters={this.showFilters}
+        <FilterByPrice
           sortLowToHigh={this.sortLowToHigh}
           sortHighToLow={this.sortHighToLow}
           sortReset={this.sortReset}
         />
-        <ModalFilter />
         <div className={styles.main}>
           {this.state.allproducts.map((item) => {
             return (

@@ -1,0 +1,52 @@
+.wrap {
+  width: 1200px;
+}
+
+.filterByPrice {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.filterTitle {
+  margin-right: 15px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.filterButton {
+  appearance: none;
+  /*margin: 10px 10px 0px 0px;*/
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  box-sizing: border-box;
+  background-color: transparent;
+  background-size: contain;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
+}
+
+.filterButton:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+.priceUp {
+  background-image: url("../images/icon/priceUP.svg");
+}
+
+.priceReset {
+  background-image: url("../images/icon/priceReset2.svg");
+}
+
+.priceDown {
+  background-image: url("../images/icon/priceDown.svg");
+}
