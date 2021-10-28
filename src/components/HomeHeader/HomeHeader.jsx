@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import styles from "./HomeHeader.module.css";
 
@@ -19,7 +20,7 @@ export function HomeHeader({ onClick }) {
       <div className={styles.header}>
         <div className={styles.headerContainerLeft}>
           <div className={styles.home}>
-            <a className={styles.homeLink} href="https://google.com"></a>
+            <NavLink to="/" className={styles.homeLink}></NavLink>
           </div>
           <div className={styles.search}>
             <input
@@ -35,48 +36,37 @@ export function HomeHeader({ onClick }) {
 
         <div className={styles.headerContainerRight}>
           <div className={styles.user}></div>
-          <a className={styles.linkHeader} href="#">
+          <NavLink to="/" className={styles.linkHeader}>
             My Account
-          </a>
+          </NavLink>
 
           <div className={styles.wishlist}></div>
-          <a className={styles.linkHeader} href="#">
+          <NavLink to="/wishlist" className={styles.linkHeader}>
             My Wishlist
-          </a>
+          </NavLink>
+
           <div className={styles.basket}></div>
-          <a className={styles.linkHeader} href="#">
+          <NavLink to="/basket" className={styles.linkHeader}>
             My Basket
-          </a>
+          </NavLink>
         </div>
       </div>
-      <div className={styles.menu}>
-        <ul className={styles.categories}>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              New
-            </a>
-          </li>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              Jewerly
-            </a>
-          </li>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              Watches
-            </a>
-          </li>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              Decorations
-            </a>
-          </li>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              Accessories
-            </a>
-          </li>
-        </ul>
+      <div className={styles.categories}>
+        <NavLink to="/new" className={styles.linkCategories}>
+          New
+        </NavLink>
+        <NavLink to="/jewerly" className={styles.linkCategories}>
+          Jewerly
+        </NavLink>
+        <NavLink to="/watches" className={styles.linkCategories}>
+          Watches
+        </NavLink>
+        <NavLink to="/decorations" className={styles.linkCategories}>
+          Decorations
+        </NavLink>
+        <NavLink to="/accessories" className={styles.linkCategories}>
+          Accessories
+        </NavLink>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Router } from "./router/Router";
 
 import { HomePage } from "./components/HomePage";
 import { ProductPage } from "./components/ProductPage";
@@ -15,7 +16,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <WishlistPage />
+      <Router />
+      {/*<WishlistPage />*/}
       {/*<AccessoriesPage />*/}
       {/*<DecorationsPage />*/}
       {/*<WatchesPage />*/}

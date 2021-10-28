@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import styles from "./HeaderMenu.module.css";
 
@@ -19,7 +20,7 @@ export function HeaderMenu({ onClick }) {
       <div className={styles.header}>
         <div className={styles.headerContainerLeft}>
           <div className={styles.logo}>
-            <a className={styles.logoLink} href="https://google.com"></a>
+            <NavLink to="/" className={styles.logoLink}></NavLink>
           </div>
         </div>
 
@@ -36,46 +37,34 @@ export function HeaderMenu({ onClick }) {
           </div>
 
           <div className={styles.user}>
-            <a className={styles.linkHeader} href="https://google.com"></a>
+            <NavLink to="/" className={styles.linkHeader}></NavLink>
           </div>
 
           <div className={styles.wishlist}>
-            <a className={styles.linkHeader} href="#"></a>
+            <NavLink to="/wishlist" className={styles.linkHeader}></NavLink>
           </div>
 
           <div className={styles.basket}>
-            <a className={styles.linkHeader} href="#"></a>
+            <NavLink to="/basket" className={styles.linkHeader}></NavLink>
           </div>
         </div>
       </div>
-      <div className={styles.menu}>
-        <ul className={styles.categories}>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              New
-            </a>
-          </li>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              Jewerly
-            </a>
-          </li>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              Watches
-            </a>
-          </li>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              Decorations
-            </a>
-          </li>
-          <li className={styles.link}>
-            <a className={styles.linkCategories} href="#">
-              Accessories
-            </a>
-          </li>
-        </ul>
+      <div className={styles.categories}>
+        <NavLink to="/new" className={styles.linkCategories}>
+          New
+        </NavLink>
+        <NavLink to="/jewerly" className={styles.linkCategories}>
+          Jewerly
+        </NavLink>
+        <NavLink to="/watches" className={styles.linkCategories}>
+          Watches
+        </NavLink>
+        <NavLink to="/decorations" className={styles.linkCategories}>
+          Decorations
+        </NavLink>
+        <NavLink to="/accessories" className={styles.linkCategories}>
+          Accessories
+        </NavLink>
       </div>
     </div>
   );
