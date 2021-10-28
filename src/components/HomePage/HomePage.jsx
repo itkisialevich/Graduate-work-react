@@ -6,6 +6,7 @@ import { ModalFilter } from "../ModalFilter";
 import { Card } from "../Card";
 import { Footer } from "../Footer";
 import productJSON from "../product.json";
+import { FilterByPrice } from "../FilterByPrice";
 
 export class HomePage extends React.Component {
   constructor(props) {
