@@ -16,6 +16,7 @@ export function Card({
   material,
   checked,
   addBasket,
+  handleCheckboxChange,
 }) {
   return (
     <div className={styles.cardBox}>
@@ -30,7 +31,7 @@ export function Card({
         color={color}
         material={material}
       >
-        <input className={styles.checkbox} type="radio" checked={checked} />
+        <input className={styles.checkbox} type="radio" checked={checked} onClick={() => handleCheckboxChange(id)}/>
         <img className={styles.miniCardImage} src={img} alt="" />
       </div>*/}
       <div
@@ -44,7 +45,12 @@ export function Card({
         color={color}
         material={material}
       >
-        <input className={styles.checkbox} type="radio" checked={checked} />
+        <input
+          className={styles.checkbox}
+          type="radio"
+          checked={checked}
+          onClick={() => handleCheckboxChange(id)}
+        />
         <img className={styles.cardImage} src={img} alt="" />
         <h3 className={styles.cardTitle}>{title}</h3>
         <p className={styles.cardDiscription}>{description}</p>

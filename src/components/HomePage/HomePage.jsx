@@ -6,7 +6,6 @@ import { ModalFilter } from "../ModalFilter";
 import { Card } from "../Card";
 import { Footer } from "../Footer";
 import productJSON from "../product.json";
-import { FilterByPrice } from "../FilterByPrice";
 
 export class HomePage extends React.Component {
   constructor(props) {
@@ -56,6 +55,19 @@ export class HomePage extends React.Component {
     this.setState({ allproducts: filteredProducts });
   };
 
+  handleCheckboxChange = (id) => {
+    const filteredProducts = this.state.allproducts.map((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          checked: !item.checked,
+        };
+      }
+      return item;
+    });
+    this.setState({ allproducts: filteredProducts });
+  };
+
   addBasket = () => {};
 
   render() {
@@ -82,6 +94,7 @@ export class HomePage extends React.Component {
                 checked={item.checked}
                 isFavourite={item.isFavourite}
                 addBasket={this.addBasket}
+                handleCheckboxChange={this.handleCheckboxChange}
               />
             );
           })}
