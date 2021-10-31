@@ -1,14 +1,20 @@
-import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./HomePage.module.css";
 import { HomeHeader } from "../HomeHeader";
 import { BoxFilter } from "../BoxFilter";
 import { ModalFilter } from "../ModalFilter";
 import { Card } from "../Card";
 import { Footer } from "../Footer";
-import productJSON from "../product.json";
 
-export class HomePage extends React.Component {
-  constructor(props) {
+export function HomePage() {
+  const allproducts = useSelector((state) => state.generalState.allproducts);
+  const filteredProducts = useSelector(
+    (state) => state.generalState.filteredProducts
+  );
+  const type = useSelector((state) => state.generalState.type);
+  const dispatch = useDispatch();
+
+  /*constructor(props) {
     super(props);
 
     this.state = {
@@ -33,74 +39,55 @@ export class HomePage extends React.Component {
   showFilters() {
     this.setState({ show: !this.state.show });
   }
+*/
 
-  sortReset = () => {
-    const filteredProducts = this.state.allproducts.sort(
-      () => Math.round(Math.random() * 100) - 50
-    );
-    this.setState({ allproducts: filteredProducts });
+  const sortReset = () => {
+    dispatch({ type: "sortReset" });
   };
 
-  sortLowToHigh = () => {
-    const filteredProducts = this.state.allproducts.sort(function (a, b) {
-      return a.price - b.price;
-    });
-    this.setState({ allproducts: filteredProducts });
+  const sortLowToHigh = (a, b) => {
+    dispatch({ type: "sortLowToHigh", a, b });
   };
 
-  sortHighToLow = () => {
-    const filteredProducts = this.state.allproducts.sort(function (a, b) {
-      return b.price - a.price;
-    });
-    this.setState({ allproducts: filteredProducts });
+  const sortHighToLow = (a, b) => {
+    dispatch({ type: "sortHighToLow", a, b });
   };
 
-  handleCheckboxChange = (id) => {
-    const filteredProducts = this.state.allproducts.map((item) => {
-      if (item.id === id) {
-        return {
-          ...item,
-          checked: !item.checked,
-        };
-      }
-      return item;
-    });
-    this.setState({ allproducts: filteredProducts });
+  const handleCheckboxChange = (id) => {
+    dispatch({ type: "handleCheckboxChange", id });
   };
 
-  addBasket = () => {};
+  /*addBasket = () => {};*/
 
-  render() {
-    return (
-      <div className={styles.wrap}>
-        <HomeHeader onClick={this.onClickSearch} />
-        <BoxFilter
-          showFilters={this.showFilters}
-          sortLowToHigh={this.sortLowToHigh}
-          sortHighToLow={this.sortHighToLow}
-          sortReset={this.sortReset}
-        />
-        {this.state.show ? <ModalFilter /> : null}
-        <div className={styles.main}>
-          {this.state.allproducts.map((item) => {
-            return (
-              <Card
-                key={item.id}
-                id={item.id}
-                img={item.img}
-                title={item.title}
-                description={item.description}
-                price={item.price}
-                checked={item.checked}
-                isFavourite={item.isFavourite}
-                addBasket={this.addBasket}
-                handleCheckboxChange={this.handleCheckboxChange}
-              />
-            );
-          })}
-        </div>
-        <Footer />
+  return (
+    <div className={styles.wrap}>
+      <HomeHeader /*onClick={onClickSearch}*/ />
+      <BoxFilter
+        /*showFilters={showFilters}*/
+        sortLowToHigh={sortLowToHigh}
+        sortHighToLow={sortHighToLow}
+        sortReset={sortReset}
+      />
+      {/*{state.show ? <ModalFilter /> : null}*/}
+      <div className={styles.main}>
+        {allproducts.map((item) => {
+          return (
+            <Card
+              key={item.id}
+              id={item.id}
+              img={item.img}
+              title={item.title}
+              description={item.description}
+              price={item.price}
+              checked={item.checked}
+              isFavourite={item.isFavourite}
+              /*addBasket={addBasket}*/
+              handleCheckboxChange={handleCheckboxChange}
+            />
+          );
+        })}
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
