@@ -3,6 +3,8 @@ import productJSON from "../../components/product.json";
 const defaultState = {
   allproducts: productJSON,
   filteredProducts: [],
+  wishlist: [],
+  basket: [],
   type: "ALL",
 };
 
