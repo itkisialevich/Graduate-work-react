@@ -11,6 +11,7 @@ export function HomePage() {
   const filteredProducts = useSelector(
     (state) => state.generalState.filteredProducts
   );
+  const show = useSelector((state) => state.generalState.show);
   const type = useSelector((state) => state.generalState.type);
   const dispatch = useDispatch();
 
@@ -22,24 +23,15 @@ export function HomePage() {
       show: false,
     };
     this.showFilters = this.showFilters.bind(this);
-  }
+  }*/
 
-  onClickSearch = (text) => {
-    const filteredProducts = productJSON.filter(
-      (item) =>
-        item.title.toLowerCase().includes(text.toLowerCase()) ||
-        item.description.toLowerCase().includes(text.toLowerCase()) ||
-        item.type.toLowerCase().includes(text.toLowerCase()) ||
-        item.color.toLowerCase().includes(text.toLowerCase()) ||
-        item.material.toLowerCase().includes(text.toLowerCase())
-    );
-    this.setState({ allproducts: filteredProducts });
+  const onClickSearch = (text) => {
+    dispatch({ type: "onClickSearch", text });
   };
 
-  showFilters() {
-    this.setState({ show: !this.state.show });
-  }
-*/
+  const showFilters = () => {
+    dispatch({ type: "showFilters" });
+  };
 
   const sortReset = () => {
     dispatch({ type: "sortReset" });
@@ -61,14 +53,14 @@ export function HomePage() {
 
   return (
     <div className={styles.wrap}>
-      <HomeHeader /*onClick={onClickSearch}*/ />
+      <HomeHeader onClick={onClickSearch} />
       <BoxFilter
-        /*showFilters={showFilters}*/
+        showFilters={showFilters}
         sortLowToHigh={sortLowToHigh}
         sortHighToLow={sortHighToLow}
         sortReset={sortReset}
       />
-      {/*{state.show ? <ModalFilter /> : null}*/}
+      {show ? <ModalFilter /> : null}
       <div className={styles.main}>
         {allproducts.map((item) => {
           return (
