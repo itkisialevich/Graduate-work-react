@@ -15,16 +15,6 @@ export function HomePage() {
   const type = useSelector((state) => state.generalState.type);
   const dispatch = useDispatch();
 
-  /*constructor(props) {
-    super(props);
-
-    this.state = {
-      allproducts: productJSON,
-      show: false,
-    };
-    this.showFilters = this.showFilters.bind(this);
-  }*/
-
   const onClickSearch = (text) => {
     dispatch({ type: "onClickSearch", text });
   };
@@ -49,7 +39,9 @@ export function HomePage() {
     dispatch({ type: "handleCheckboxChange", id });
   };
 
-  /*addBasket = () => {};*/
+  const addBasket = (id) => {
+    dispatch({ type: "addBasket", id });
+  };
 
   return (
     <div className={styles.wrap}>
@@ -73,7 +65,7 @@ export function HomePage() {
               price={item.price}
               checked={item.checked}
               isFavourite={item.isFavourite}
-              /*addBasket={addBasket}*/
+              addBasket={addBasket}
               handleCheckboxChange={handleCheckboxChange}
             />
           );

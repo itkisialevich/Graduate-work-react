@@ -10,10 +10,20 @@
 
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 50px;
   width: 1200px;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0px 10px 0px;
+  width: 1200px;
+  border-bottom: 1px solid #ffffff;
 }
 
 .productOverview {
@@ -22,13 +32,13 @@
   justify-content: space-between;
   align-items: flex-start;
   width: 300px;
-  height: 350px;
+  height: 250px;
   margin-left: 200px;
 }
 
 .productImg {
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: 250px;
 }
 
 .productMain {
@@ -44,6 +54,24 @@
   align-items: center;
   margin-bottom: 10px;
   width: 300px;
+}
+
+.basket {
+  appearance: none;
+  margin: 0px;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  background-image: url("../images/icon/delete.svg");
+  background-size: contain;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  opacity: 0.5;
+  position: relative;
 }
 
 .productTitle,

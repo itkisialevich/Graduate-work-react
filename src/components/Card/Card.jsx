@@ -56,7 +56,7 @@ export function Card({
         <p className={styles.cardDiscription}>{description}</p>
         <div className={styles.cardFooter}>
           <h3 className={styles.cardPrice}>{price}</h3>
-          <button onClick={() => addBasket()} className={styles.cardButton}>
+          <button onClick={() => addBasket(id)} className={styles.cardButton}>
             Add to bag
           </button>
         </div>
