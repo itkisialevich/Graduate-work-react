@@ -23,7 +23,7 @@ export const generalState = (state = defaultState, action) => {
       );
       return {
         ...state,
-        allproducts: filteredProducts,
+        //allproducts: filteredProducts,
         filteredProducts: filteredProducts,
       };
     }

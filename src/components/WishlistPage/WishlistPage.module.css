@@ -17,6 +17,22 @@
   width: 1200px;
 }
 
+.basketTitle {
+  margin: 0px;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: #000000;
+}
+
+.lineBlack {
+  margin: 5px 0px 15px 0px;
+  width: 1200px;
+  height: 3px;
+  background-color: #000000;
+}
+
 .product {
   display: flex;
   justify-content: space-between;

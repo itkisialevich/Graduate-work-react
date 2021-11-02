@@ -7,12 +7,12 @@ import { Card } from "../Card";
 import { Footer } from "../Footer";
 
 export function HomePage() {
-  const allproducts = useSelector((state) => state.generalState.allproducts);
+  //const allproducts = useSelector((state) => state.generalState.allproducts);
   const filteredProducts = useSelector(
     (state) => state.generalState.filteredProducts
   );
   const show = useSelector((state) => state.generalState.show);
-  const type = useSelector((state) => state.generalState.type);
+  //const type = useSelector((state) => state.generalState.type);
   const dispatch = useDispatch();
 
   const onClickSearch = (text) => {

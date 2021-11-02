@@ -1,4 +1,5 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./JewerlyPage.module.css";
 import { HeaderMenu } from "../HeaderMenu";
 import { BoxFilter } from "../BoxFilter";
@@ -7,86 +8,74 @@ import { Card } from "../Card";
 import { Footer } from "../Footer";
 import productJSON from "../product.json";
 
-export class JewerlyPage extends React.Component {
-  constructor(props) {
-    super(props);
+export function JewerlyPage() {
+  const allproducts = useSelector(
+    (state) => state.generalState.allproducts
+  ).filter((item) => item.category === "jewerly");
+  /*const filteredProducts = useSelector(
+    (state) => state.generalState.filteredProducts
+  );*/
+  const show = useSelector((state) => state.generalState.show);
+  //const type = useSelector((state) => state.generalState.type);
+  const dispatch = useDispatch();
 
-    this.state = {
-      allproducts: productJSON.filter((item) => item.category === "jewerly"),
-      show: false,
-    };
-    this.showFilters = this.showFilters.bind(this);
-  }
-
-  onClickSearch = (text) => {
-    const filteredProducts = productJSON.filter(
-      (item) =>
-        item.title.toLowerCase().includes(text.toLowerCase()) ||
-        item.description.toLowerCase().includes(text.toLowerCase()) ||
-        item.type.toLowerCase().includes(text.toLowerCase()) ||
-        item.color.toLowerCase().includes(text.toLowerCase()) ||
-        item.material.toLowerCase().includes(text.toLowerCase())
-    );
-    this.setState({ allproducts: filteredProducts });
+  const onClickSearch = (text) => {
+    dispatch({ type: "onClickSearch", text });
   };
 
-  showFilters() {
-    this.setState({ show: !this.state.show });
-  }
-
-  sortReset = () => {
-    const filteredProducts = this.state.allproducts.sort(
-      () => Math.round(Math.random() * 100) - 50
-    );
-    this.setState({ allproducts: filteredProducts });
+  const showFilters = () => {
+    dispatch({ type: "showFilters" });
   };
 
-  sortLowToHigh = () => {
-    const filteredProducts = this.state.allproducts.sort(function (a, b) {
-      return a.price - b.price;
-    });
-    this.setState({ allproducts: filteredProducts });
+  const sortReset = () => {
+    dispatch({ type: "sortReset" });
   };
 
-  sortHighToLow = () => {
-    const filteredProducts = this.state.allproducts.sort(function (a, b) {
-      return b.price - a.price;
-    });
-    this.setState({ allproducts: filteredProducts });
+  const sortLowToHigh = () => {
+    dispatch({ type: "sortLowToHigh" });
   };
 
-  addBasket = () => {};
+  const sortHighToLow = () => {
+    dispatch({ type: "sortHighToLow" });
+  };
 
-  render() {
-    return (
-      <div className={styles.wrap}>
-        <HeaderMenu onClick={this.onClickSearch} />
-        <BoxFilter
-          showFilters={this.showFilters}
-          sortLowToHigh={this.sortLowToHigh}
-          sortHighToLow={this.sortHighToLow}
-          sortReset={this.sortReset}
-        />
-        {this.state.show ? <ModalFilter /> : null}
-        <div className={styles.main}>
-          {this.state.allproducts.map((item) => {
-            return (
-              <Card
-                key={item.id}
-                id={item.id}
-                img={item.img}
-                title={item.title}
-                description={item.description}
-                price={item.price}
-                checked={item.checked}
-                isFavourite={item.isFavourite}
-                addBasket={this.addBasket}
-              />
-            );
-          })}
-        </div>
-        <Footer />
+  const handleCheckboxChange = (id) => {
+    dispatch({ type: "handleCheckboxChange", id });
+  };
+
+  const addBasket = (id) => {
+    dispatch({ type: "addBasket", id });
+  };
+
+  return (
+    <div className={styles.wrap}>
+      <HeaderMenu onClick={onClickSearch} />
+      <BoxFilter
+        showFilters={showFilters}
+        sortLowToHigh={sortLowToHigh}
+        sortHighToLow={sortHighToLow}
+        sortReset={sortReset}
+      />
+      {show ? <ModalFilter /> : null}
+      <div className={styles.main}>
+        {allproducts.map((item) => {
+          return (
+            <Card
+              key={item.id}
+              id={item.id}
+              img={item.img}
+              title={item.title}
+              description={item.description}
+              price={item.price}
+              checked={item.checked}
+              isFavourite={item.isFavourite}
+              addBasket={addBasket}
+              handleCheckboxChange={handleCheckboxChange}
+            />
+          );
+        })}
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }

@@ -1,83 +1,73 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "./WatchesPage.module.css";
 import { HeaderMenu } from "../HeaderMenu";
 import { FilterByPrice } from "../FilterByPrice";
 import { Card } from "../Card";
 import { Footer } from "../Footer";
-import productJSON from "../product.json";
 
-export class WatchesPage extends React.Component {
-  constructor(props) {
-    super(props);
+export function WatchesPage() {
+  const allproducts = useSelector(
+    (state) => state.generalState.allproducts
+  ).filter((item) => item.category === "watches");
+  /*const filteredProducts = useSelector((state) =>
+    state.generalState.filteredProducts.filter(
+      (item) => item.category === "decorations"
+    )
+  );*/
+  const dispatch = useDispatch();
 
-    this.state = {
-      allproducts: productJSON.filter((item) => item.category === "watches"),
-    };
-  }
-
-  onClickSearch = (text) => {
-    const filteredProducts = productJSON.filter(
-      (item) =>
-        item.title.toLowerCase().includes(text.toLowerCase()) ||
-        item.description.toLowerCase().includes(text.toLowerCase()) ||
-        item.type.toLowerCase().includes(text.toLowerCase()) ||
-        item.color.toLowerCase().includes(text.toLowerCase()) ||
-        item.material.toLowerCase().includes(text.toLowerCase())
-    );
-    this.setState({ allproducts: filteredProducts });
+  const onClickSearch = (text) => {
+    dispatch({ type: "onClickSearch", text });
   };
 
-  sortReset = () => {
-    const filteredProducts = this.state.allproducts.sort(
-      () => Math.round(Math.random() * 100) - 50
-    );
-    this.setState({ allproducts: filteredProducts });
+  const sortReset = () => {
+    dispatch({ type: "sortReset" });
   };
 
-  sortLowToHigh = () => {
-    const filteredProducts = this.state.allproducts.sort(function (a, b) {
-      return a.price - b.price;
-    });
-    this.setState({ allproducts: filteredProducts });
+  const sortLowToHigh = () => {
+    dispatch({ type: "sortLowToHigh" });
   };
 
-  sortHighToLow = () => {
-    const filteredProducts = this.state.allproducts.sort(function (a, b) {
-      return b.price - a.price;
-    });
-    this.setState({ allproducts: filteredProducts });
+  const sortHighToLow = () => {
+    dispatch({ type: "sortHighToLow" });
   };
 
-  addBasket = () => {};
+  const handleCheckboxChange = (id) => {
+    dispatch({ type: "handleCheckboxChange", id });
+  };
 
-  render() {
-    return (
-      <div className={styles.wrap}>
-        <HeaderMenu onClick={this.onClickSearch} />
-        <FilterByPrice
-          sortLowToHigh={this.sortLowToHigh}
-          sortHighToLow={this.sortHighToLow}
-          sortReset={this.sortReset}
-        />
-        <div className={styles.main}>
-          {this.state.allproducts.map((item) => {
-            return (
-              <Card
-                key={item.id}
-                id={item.id}
-                img={item.img}
-                title={item.title}
-                description={item.description}
-                price={item.price}
-                checked={item.checked}
-                isFavourite={item.isFavourite}
-                addBasket={this.addBasket}
-              />
-            );
-          })}
-        </div>
-        <Footer />
+  const addBasket = (id) => {
+    dispatch({ type: "addBasket", id });
+  };
+
+  return (
+    <div className={styles.wrap}>
+      <HeaderMenu onClick={onClickSearch} />
+      <FilterByPrice
+        sortLowToHigh={sortLowToHigh}
+        sortHighToLow={sortHighToLow}
+        sortReset={sortReset}
+      />
+      <div className={styles.main}>
+        {allproducts.map((item) => {
+          return (
+            <Card
+              key={item.id}
+              id={item.id}
+              img={item.img}
+              title={item.title}
+              description={item.description}
+              price={item.price}
+              checked={item.checked}
+              isFavourite={item.isFavourite}
+              addBasket={addBasket}
+              handleCheckboxChange={handleCheckboxChange}
+            />
+          );
+        })}
       </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }

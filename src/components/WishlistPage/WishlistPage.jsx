@@ -5,7 +5,7 @@ import { HeaderMenu } from "../HeaderMenu";
 import { Footer } from "../Footer";
 import styles from "./WishlistPage.module.css";
 
-export function WishlistPage() {
+export function WishlistPage({ id }) {
   const wishlist = useSelector((state) => state.generalState.wishlist);
   const dispatch = useDispatch();
 
@@ -13,10 +13,16 @@ export function WishlistPage() {
     dispatch({ type: "deleteFromWishlist", id });
   };
 
+  const addBasket = (id) => {
+    dispatch({ type: "addBasket", id });
+  };
+
   return (
     <div className={styles.wrap}>
       <HeaderMenu />
       <div className={styles.main}>
+        <h2 className={styles.basketTitle}>My Wishlist</h2>
+        <div className={styles.lineBlack} />
         {wishlist.map((item) => {
           return (
             <div className={styles.product}>
@@ -38,7 +44,12 @@ export function WishlistPage() {
 
                 <div className={styles.productFooter}>
                   <h3 className={styles.productPrice}>USD {item.price}</h3>
-                  <button className={styles.productButton}>Add to bag</button>
+                  <button
+                    className={styles.productButton}
+                    onClick={() => addBasket(item.id)}
+                  >
+                    Add to bag
+                  </button>
                 </div>
               </div>
             </div>
