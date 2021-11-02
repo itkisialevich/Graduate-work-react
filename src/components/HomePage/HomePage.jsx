@@ -27,12 +27,12 @@ export function HomePage() {
     dispatch({ type: "sortReset" });
   };
 
-  const sortLowToHigh = (a, b) => {
-    dispatch({ type: "sortLowToHigh", a, b });
+  const sortLowToHigh = () => {
+    dispatch({ type: "sortLowToHigh" });
   };
 
-  const sortHighToLow = (a, b) => {
-    dispatch({ type: "sortHighToLow", a, b });
+  const sortHighToLow = () => {
+    dispatch({ type: "sortHighToLow" });
   };
 
   const handleCheckboxChange = (id) => {
@@ -54,7 +54,7 @@ export function HomePage() {
       />
       {show ? <ModalFilter /> : null}
       <div className={styles.main}>
-        {allproducts.map((item) => {
+        {filteredProducts.map((item) => {
           return (
             <Card
               key={item.id}

@@ -1,14 +1,15 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+
 import { HeaderMenu } from "../HeaderMenu";
 import { Footer } from "../Footer";
 import styles from "./WishlistPage.module.css";
 
-export function WishlistPage({ id, deleteFromWishlist }) {
+export function WishlistPage() {
   const wishlist = useSelector((state) => state.generalState.wishlist);
   const dispatch = useDispatch();
 
-  deleteFromWishlist = (id) => {
+  const deleteFromWishlistHandler = (id) => {
     dispatch({ type: "deleteFromWishlist", id });
   };
 
@@ -18,7 +19,7 @@ export function WishlistPage({ id, deleteFromWishlist }) {
       <div className={styles.main}>
         {wishlist.map((item) => {
           return (
-            <div className={styles.product} id={id}>
+            <div className={styles.product}>
               <img className={styles.productImg} src={item.img} alt="" />
               <div className={styles.productOverview}>
                 <div className={styles.productMain}>
@@ -26,7 +27,7 @@ export function WishlistPage({ id, deleteFromWishlist }) {
                     <h3 className={styles.productTitle}>{item.title}</h3>
                     <button
                       className={styles.basket}
-                      onClick={() => deleteFromWishlist(id)}
+                      onClick={() => deleteFromWishlistHandler(item.id)}
                     ></button>
                   </div>
                   <p className={styles.productDiscription}>

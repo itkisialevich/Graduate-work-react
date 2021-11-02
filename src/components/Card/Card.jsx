@@ -14,7 +14,6 @@ export function Card({
   isFavourite,
   color,
   material,
-  checked,
   addBasket,
   handleCheckboxChange,
 }) {
@@ -48,7 +47,7 @@ export function Card({
         <input
           className={styles.checkbox}
           type="radio"
-          checked={checked}
+          defaultChecked={isFavourite}
           onClick={() => handleCheckboxChange(id)}
         />
         <img className={styles.cardImage} src={img} alt="" />
