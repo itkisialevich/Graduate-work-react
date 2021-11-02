@@ -9,7 +9,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -23,7 +23,7 @@
     "status": "",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -37,7 +37,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "pink",
     "material": "rose-gold tone"
   },
@@ -51,7 +51,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "gray",
     "material": "rose-gold tone"
   },
@@ -65,7 +65,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "gray",
     "material": "silver tone"
   },
@@ -78,7 +78,7 @@
     "currency": "USD",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "mixed tone"
   },
@@ -92,7 +92,7 @@
     "status": "",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "gold tone"
   },
@@ -106,7 +106,7 @@
     "status": "",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -120,7 +120,7 @@
     "status": "",
     "category": "jewerly",
     "type": "ring",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -134,7 +134,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -147,7 +147,7 @@
     "currency": "USD",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -160,7 +160,7 @@
     "currency": "USD",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -173,7 +173,7 @@
     "currency": "USD",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "blue",
     "material": "silver tone"
   },
@@ -187,7 +187,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -200,7 +200,7 @@
     "currency": "USD",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -214,7 +214,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "brown",
     "material": "rose-gold tone"
   },
@@ -228,7 +228,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "pink",
     "material": "rose-gold tone"
   },
@@ -241,7 +241,7 @@
     "currency": "USD",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -254,7 +254,7 @@
     "currency": "USD",
     "category": "jewerly",
     "type": "earrings",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -268,7 +268,7 @@
     "status": "",
     "category": "jewerly",
     "type": "necklaces",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -282,7 +282,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "necklaces",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -296,7 +296,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "necklaces",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -310,7 +310,7 @@
     "status": "",
     "category": "jewerly",
     "type": "necklaces",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -324,7 +324,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "bracelets",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -338,7 +338,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "bracelets",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -352,7 +352,7 @@
     "status": "",
     "category": "jewerly",
     "type": "bracelets",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -366,7 +366,7 @@
     "status": "",
     "category": "jewerly",
     "type": "bracelets",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -379,7 +379,7 @@
     "currency": "USD",
     "category": "jewerly",
     "type": "bracelets",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -393,7 +393,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "bracelets",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -407,7 +407,7 @@
     "status": "",
     "category": "jewerly",
     "type": "bracelets",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "mixed tone"
   },
@@ -421,7 +421,7 @@
     "status": "new",
     "category": "jewerly",
     "type": "bracelets",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -435,7 +435,7 @@
     "status": "new",
     "category": "accessories",
     "type": "accessories",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "pink",
     "material": "gold tone"
   },
@@ -449,7 +449,7 @@
     "status": "new",
     "category": "accessories",
     "type": "accessories",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -463,7 +463,7 @@
     "status": "",
     "category": "accessories",
     "type": "accessories",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "mixed tone"
   },
@@ -477,7 +477,7 @@
     "status": "new",
     "category": "accessories",
     "type": "accessories",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -491,7 +491,7 @@
     "status": "new",
     "category": "decorations",
     "type": "decorations",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -505,7 +505,7 @@
     "status": "",
     "category": "decorations",
     "type": "decorations",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -519,7 +519,7 @@
     "status": "",
     "category": "decorations",
     "type": "decorations",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "gold tone"
   },
@@ -533,7 +533,7 @@
     "status": "",
     "category": "decorations",
     "type": "decorations",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "gray",
     "material": ""
   },
@@ -547,7 +547,7 @@
     "status": "new",
     "category": "decorations",
     "type": "decorations",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "gold tone"
   },
@@ -561,7 +561,7 @@
     "status": "new",
     "category": "decorations",
     "type": "decorations",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "gold tone"
   },
@@ -575,7 +575,7 @@
     "status": "new",
     "category": "decorations",
     "type": "decorations",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "red",
     "material": ""
   },
@@ -589,7 +589,7 @@
     "status": "new",
     "category": "decorations",
     "type": "decorations",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -603,7 +603,7 @@
     "status": "new",
     "category": "watches",
     "type": "watches",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "pink",
     "material": "rose-gold tone"
   },
@@ -617,7 +617,7 @@
     "status": "",
     "category": "watches",
     "type": "watches",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "gold tone"
   },
@@ -631,7 +631,7 @@
     "status": "",
     "category": "watches",
     "type": "watches",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "silver tone"
   },
@@ -645,7 +645,7 @@
     "status": "",
     "category": "watches",
     "type": "watches",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "pink",
     "material": "rose-gold tone"
   },
@@ -659,7 +659,7 @@
     "status": "",
     "category": "watches",
     "type": "watches",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   },
@@ -673,7 +673,7 @@
     "status": "new",
     "category": "watches",
     "type": "watches",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "gray",
     "material": "silver tone"
   },
@@ -687,7 +687,7 @@
     "status": "new",
     "category": "watches",
     "type": "watches",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "black",
     "material": "silver tone"
   },
@@ -701,7 +701,7 @@
     "status": "new",
     "category": "watches",
     "type": "watches",
-    "isFavourite": "isFavourite",
+    "isFavourite": false,
     "color": "white",
     "material": "rose-gold tone"
   }

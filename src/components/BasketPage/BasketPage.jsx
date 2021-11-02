@@ -4,17 +4,13 @@ import { HeaderMenu } from "../HeaderMenu";
 import { Footer } from "../Footer";
 import styles from "./BasketPage.module.css";
 
-export function BasketPage({ id, deleteFromBasket, totalPrice }) {
+export function BasketPage() {
   const basket = useSelector((state) => state.generalState.basket);
   const total = useSelector((state) => state.generalState.total);
   const dispatch = useDispatch();
 
-  deleteFromBasket = (id) => {
+  const deleteFromBasket = (id) => {
     dispatch({ type: "deleteFromBasket", id });
-  };
-
-  totalPrice = () => {
-    dispatch({ type: "totalPrice" });
   };
 
   return (
@@ -25,7 +21,7 @@ export function BasketPage({ id, deleteFromBasket, totalPrice }) {
         <div className={styles.lineBlack} />
         {basket.map((item) => {
           return (
-            <div className={styles.basketCard} id={id}>
+            <div className={styles.basketCard}>
               <div className={styles.basketOverview}>
                 <div className={styles.basketMain}>
                   <img className={styles.basketImg} src={item.img} alt="" />
@@ -39,7 +35,7 @@ export function BasketPage({ id, deleteFromBasket, totalPrice }) {
                 </div>
                 <button
                   className={styles.basket}
-                  onClick={() => deleteFromBasket(id)}
+                  onClick={() => deleteFromBasket(item.id)}
                 ></button>
               </div>
               <div className={styles.basketLine} />
@@ -50,9 +46,7 @@ export function BasketPage({ id, deleteFromBasket, totalPrice }) {
         <div className={styles.basketCheck}>
           <div className={styles.total}>
             <h2 className={styles.totalTitle}>Total</h2>
-            <p className={styles.totalPrice}>
-              &#36; {() => totalPrice()} {total}
-            </p>
+            <p className={styles.totalPrice}>&#36; {total}</p>
           </div>
           <button className={styles.basketButton}>Checkout</button>
         </div>
